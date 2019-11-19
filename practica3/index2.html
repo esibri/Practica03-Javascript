@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="formulario.js"></script>
+    <style type="text/css">
+    
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table>
+            <tr>
+                <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatorios()">
+                    <td> <label for="cedula">Cedula (*)</label></td>
+                    <td> <input type="text" id="cedula" name="cedula" value="" minlength="5" maxlength="40" 
+                             placeholder="Ingrese el número de cedula ..." onkeyup="return validarNumero(this)" /></td>
+                    <span id="mensajeCedula" class="error"></span>
+                    <br>
+            </tr>
+            <tr>
+
+                <form id="formulario01" method="POST" action="" onsubmit="return validarCamposObligatorios()">
+                    <td> <label for="nombres">Nombres (*)</label></td>
+                    <td> <input type="text" id="nombres" name="nombres" value=""
+                            placeholder="Ingrese sus dos nombres ..." onkeyup="return validarLetras(this)" /></td>
+                    <br>
+
+            </tr>
+            <tr>
+                <td> <label for="apellidos">Apelidos (*)</label></td>
+                <td><input type="text" id="apellidos" name="apellidos" value=""
+                         placeholder="Ingrese sus dos apellidos ..." onkeyup="return validarLetras(this)" /></td>
+
+                        
+                <br>
+
+            </tr>
+            <tr>
+                <td><label for="direccion">Dirección (*)</label></td>
+                <td><input type="text" id="direccion" name="direccion" value=""
+                        placeholder="Ingrese su dirección ..." /></td>
+                <br>
+            </tr>
+            <tr>
+                <td><label for="telefono">Teléfono (*)</label>
+                <td><input type="text" id="telefono" name="telefono" value="" maxlength="10" 
+                    placeholder="Ingrese su número telefónico ..." onkeyup="return validarNumero(this)" /></td>
+
+                     <br>
+            </tr>
+            <tr>
+                <td><label for="fecha">Fecha Nacimiento (*)</label>
+                <td> <input type="text" id="fechaNacimiento" name="fechaNacimiento" value=""
+                        placeholder="Ingrese su fecha de nacimiento ..." onkeyup="return validarFecha(this)"/>
+                    <br>
+            </tr>
+            <tr>
+                <td><label for="correo">Correo electrónico (*)</label></td>
+                <td><input type="text" id="correo" name="correo" value="" 
+                        placeholder="Ingrese su correo electrónico ..." onkeyup="return validarCorreo(this)" /></td>
+
+                        
+                <br>
+            </tr>
+            <tr>
+                <td> <label for="correo">Contraseña (*)</label></td>
+                <td> <input type="password" id="contrasena" name="contrasena" value=""
+                        placeholder="Ingrese su contraseña ..." onkeyup="return validarContrasenia(this)"/></td>
+                <br>
+            </tr>
+            <tr>
+                <td> <input type="submit" id="crear" name="crear" value="Aceptar" /></td>
+                <td> <input type="reset" id="cancelar" name="cancelar" value="Cancelar" /></td>
+            </tr>
+            </form>
+
+        </table>
+    </center>
+
+</body>
+
+</html>
